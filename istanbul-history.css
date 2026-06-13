@@ -1,130 +1,131 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  background: #3594cc;
+    background: #3594cc;
 }
 
 .container {
-  max-width: 850px;
-  margin: 0 auto;
+    max-width: 850px;
+    margin: 0 auto;
 }
 
 .timeline {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-column-gap: 2%;
-  align-items: start;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: 2%;
+    align-items: start;
 }
 
 .icon {
-  display: flex;
+    display: flex;
 
-  /*The justify-content property aligns the
-    flexible container's items when the items
-    do not use all available space on the
-    main-axis (horizontally).*/
-  justify-content: center;
+    /* The justify-content property aligns the
+        flexible container's items when the items
+        do not use all available space on the
+        main-axis (horizontally). */
+    justify-content: center;
 
-  /*The align-self property specifies the alignment
-    in the block direction for the selected item
-    inside a flexbox or grid container.*/
-  align-self: stretch;
-  margin: 0 auto;
-  grid-column-start: 1;
-  grid-row: 1/3;
-  background: linear-gradient(to right, #3594cc 45%, #b1dcf5 45%, #b1dcf5 45%, #3594cc 50%);
-  color: #fff;
+    /* The align-self property specifies the alignment
+        in the block direction for the selected item
+        inside a flexbox or grid container. */
+    align-self: stretch;
+
+    margin: 0 auto;
+    grid-column-start: 1;
+    grid-row: 1/3;
+    background: linear-gradient(to right, #3594cc 45%, #b1dcf5 45%, #b1dcf5 45%, #3594cc 50%);
+    color: #fff;
 }
 
-/*Targets the HTML <img> element rather
-  than a CSS class named "image".*/
+/* Targets the HTML <img> element rather
+   than a CSS class named "image". */
 img {
-  width: 100%;
+   width: 100%;
 }
 
 .image {
-  grid-column-start: 2;
-  grid-row-start: 2;
-  margin-bottom: 5%;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    margin-bottom: 5%;
 }
 
 .image p {
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 .text {
-  background: #fff;
-  text-align: center;
-  padding: 10px;
-  border-radius: 5px;
-  color: #383838;
-  padding-left: 10px;
-  transition: all .6s ease;
-  margin-bottom: 5%;
+    background: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    color: #383838;
+    padding-left: 10px;
+    transition: all .6s ease;
+    margin-bottom: 5%;
 }
 
 .text:hover {
-  background: bisque;
+    background: bisque;
 }
 
 .text h2 {
-  margin: 0;
-  font-size: 18px;
-  text-transform: uppercase;
-  font-family: russo one;
-  letter-spacing: 2px;
+    margin: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: russo one;
+    letter-spacing: 2px;
 }
 
 .text p {
-  line-height: 1.4;
-  font-family: montserrat;
+    line-height: 1.4;
+    font-family: montserrat;
 }
 
-/*When the body's width is 640 pixels or larger.*/
+/* When the body's width is 640 pixels or larger. */
 @media(min-width: 640px) {
-  .timeline {
-    grid-template-columns: 45% auto 45%;
-    grid-column-gap: 0;
-  }
+    .timeline {
+        grid-template-columns: 45% auto 45%;
+        grid-column-gap: 0;
+    }
 
-  .text {
-    grid-column-start: 1;
-  }
-
-  .switch-img-text-pos {
     .text {
-      grid-column-start: 3;
+        grid-column-start: 1;
     }
-  
+
+    .switch-img-text-pos {
+        .text {
+        grid-column-start: 3;
+        }
+    
+        .image {
+        grid-column-start: 1;
+        }
+    }
+
+    .icon {
+        /* Horizontal positioning */
+        grid-column-start: 2;
+    }
+
     .image {
-      grid-column-start: 1;
+        grid-column-start: 3;
+
+        /* Vertical positioning */
+        grid-row-start: 1;
     }
-  }
-
-  .icon {
-    /*Horizontal positioning*/
-    grid-column-start: 2;
-  }
-
-  .image {
-    grid-column-start: 3;
-
-    /*Vertical positioning*/
-    grid-row-start: 1;
-  }
 }
 
 span {
-  font-size: 20px;
-  background: #46a4da;
-  border-radius: 50px;
-  width: 50px;
-  height: 50px;
-  line-height: 40px;
-  border: 5px solid #b1dcf5;
+    font-size: 20px;
+    background: #46a4da;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    border: 5px solid #b1dcf5;
 }
